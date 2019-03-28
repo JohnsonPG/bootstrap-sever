@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>canvas</title>
+		<style>
+			canvas{
+				background:white;
+				/*width:600px;
+				height:600px;*.
+			}
+		</style>
+	</head>
+	<body>
+		<!--<img src="" />-->
+		<canvas id="canvas" width=600 height=600 ></canvas>
+		<script>
+			/*canvas画内容，两句代码必须*/
+			var canvas=document.getElementById("canvas")
+			/*取2d画布
+			 webgl 3d绘图*/
+			context=canvas.getContext("2d")
+			/*画线
+			 */
+			/*设置线条样式*/
+			context.strokeStyle="blue";
+			/*开始画线*/
+			context.beginPath();
+			/*画第一个点*/
+			context.moveTo(100,100)
+			/*画第二个点*/
+			context.lineTo(200,200)
+			/*继续画点*/
+			context.lineTo(250,40)
+			context.lineTo(300,300)
+			context.lineTo(400,50)
+			/*关闭路径*/
+			context.closePath();
+			/*画线*/
+			context.stroke();
+		</script>
+	</body>
+</html>
